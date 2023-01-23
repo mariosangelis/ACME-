@@ -1,0 +1,19 @@
+In order to run this project:
+
+1) ifconfig
+
+2) Navigate to pebble directory and open docker-compose.yml file
+3) Change te following command by providing the ip of the host machine
+  command: pebble -config /test/config/pebble-config.json -strict -dnsserver 10.4.11.209:10053
+  
+4) Type: sudo docker compose up in pebble directory
+
+5) Type: ./run dns01 --dir https://127.0.0.1:14000 --record 10.4.11.209 --domain netsec.ethz.ch   
+         ./run http01 --dir https://127.0.0.1:14000 --record 10.4.11.209 --domain netsec.ethz.ch mangelis.ethz.ch --revoke
+         ./run dns01 --dir https://127.0.0.1:14000 --record 10.4.11.209 --domain *.exam
+         
+6) To upload the project on gitlab:
+
+    git add .
+    git commit -a -m "commit"
+    git push -f

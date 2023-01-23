@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Compile your project here"
+
+pip install pycryptodome
+pip install flask
+pip install dnslib
